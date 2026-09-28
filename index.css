@@ -1,0 +1,136 @@
+* { box-sizing: border-box; }
+
+
+
+/* This is to style the Alex link */
+#site-header > a { 
+    text-decoration: none; 
+    color: black;
+    font-weight: bold;
+    transition: color 0.5s ease;
+    text-transform: uppercase;
+}
+
+#site-header > a:hover { color: green; }
+
+
+/* This is to style the nav links */
+nav a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.4s ease;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+/* This is to style the nav list */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    
+}
+/* This is to style the site header only */
+#site-header { 
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    border-bottom: 1px solid #36454f;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+main {
+    padding: 60px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+main section {
+    margin: 0;
+    padding: 30px 0;
+}
+
+main section h2 {
+    font-size: 1.5rem;
+}
+
+#hero h1 {
+    margin: 0;
+    font-size: 6rem;
+    line-height: 1.2;
+}
+/* The paragraph immediately after h1. */
+#hero h1 + p {
+    margin: 0;
+    padding: 20px 0;
+    max-width: 1000px;
+    font-size: 1.2rem;
+    color: #36454f;
+}
+/* Direct child of hero, which is the first paragraph above h1 */
+#hero > p:first-of-type {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+#about h2 {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+#interests h2 {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+#experiences h2 {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+footer {
+    border-top: 1px solid #36454f;
+}
+
+body {
+    font-family: Arial;
+    color: #222;
+    line-height: 1.5;
+    background-color: #fdfbd4;
+}
+
+/* For devices like phones */
+@media (max-width: 600px) {
+    #site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        gap: 10px;
+    }
+    #hero h1 {
+        font-size: 3.5rem;
+    }
+    main {
+        padding: 24px;
+    }
+
+}
