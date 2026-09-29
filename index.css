@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+.unbounded-header {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
 :root {
     --parchment-white: #f4f1e8;
     --ink-black: #1e1e1a;
@@ -98,6 +105,7 @@ nav ul {
     margin: 0;
     font-size: 6rem;
     font-family: "Unbounded", sans-serif;
+    font-weight: 900;
     line-height: 1.2;
     color: var(--ink-black);
 }
