@@ -1,14 +1,8 @@
+/* 1. Imports and variables */
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-.unbounded-heading {
-  font-family: "Unbounded", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-}
 :root {
     --parchment-white: #f4f1e8;
     --ink-black: #1e1e1a;
@@ -17,16 +11,33 @@
     --olive-green: #4A5A3C;
     --moss: #7A8C5E;
 }
-
+/* 2. Global/reset styles */
 * { 
     box-sizing: border-box; 
 }
-
 html {
     scroll-behavior: smooth;
 }
+body {
+    margin: 0;
+    line-height: 1.5;
+    background-color: var(--parchment-white);
+}
 
-
+/* 3. Header and header elements */
+.site-header { 
+    margin: 0;
+    padding: 20px 80px 20px 80px;
+    display: flex;
+    border-bottom: 2px solid var(--olive-green);
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--ink-black);
+}
 .header-dot {
     margin: 0;
     display: inline-block;
@@ -39,7 +50,6 @@ html {
     background-color: var(--burnt-orange);
 
 }
-/* This is to style the Alex link */
 .header-link{ 
     margin: 0 0 0 24px;
     text-decoration: none; 
@@ -51,16 +61,24 @@ html {
     letter-spacing: 0.08em;
     font-size: 0.8rem;
 }
-
 .header-link:hover { 
     color: var(--moss); 
 }
-
 nav {
     display: flex;
     justify-content:flex-start;
 }
-/* This is to style the nav links */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    
+}
 nav a {
     color: var(--parchment-white);
     text-decoration: none;
@@ -69,11 +87,9 @@ nav a {
     font-family: "Geist Mono", sans-serif;
     position: relative;
 }
-
 nav a:hover {
     color: var(--burnt-orange);
 }
-
 nav a::after {
     content: "";
     position: absolute;
@@ -86,24 +102,9 @@ nav a::after {
     transform-origin: left;
     transition: transform 0.4s ease;
 }
-
 nav a:hover::after {
     transform: scaleX(1);
 }
-
-/* This is to style the nav list */
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 50px;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-size: 0.9rem;
-    
-}
-
 .cta-button {
     font-family: "Geist Mono", sans-serif;
     font-weight: bolder;
@@ -120,41 +121,35 @@ nav ul {
     display: inline-block;
     text-decoration: none;
 }
-
 .cta-button:hover {
     background-color: var(--olive-green);
 }
-/* This is to style the site header only */
-.site-header { 
-    margin: 0;
-    padding: 20px 80px 20px 80px;
-    display: flex;
-    border-bottom: 2px solid var(--olive-green);
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: var(--ink-black);
-}
 
-.inline-label {
+/* 4a. Hero status bar */
+.hsb-title {
     margin: 0;
-    display: inline;
-    font-weight: 600;
     font-family: "Geist Mono", sans-serif;
+    color: var(--parchment-white);
+    font-weight: 300;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
-    font-size: 0.9rem;
 }
-
-.main-heading {
+.hsb-status {
     margin: 0;
-    font-size: 6rem;
-    font-family: "Unbounded", sans-serif;
-    font-weight: 900;
-    line-height: 1.2;
-    color: var(--ink-black);
+    font-family: "Geist Mono", sans-serif;
+    color: var(--parchment-white);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+/* 4b. Hero section */
+.hero {
+    margin: 60px -80px;
+    border-bottom: 2px solid var(--ink-black);
+    padding-left: 80px;
+    padding-right: 80px;
 }
 .hero-status-bar {
     margin-top: -80px;
@@ -168,29 +163,23 @@ nav ul {
     justify-content: space-between;
     align-items: center;
 }
-
-.hsb-title {
+.name-label {
     margin: 0;
-    font-family: "Geist Mono", sans-serif;
-    color: var(--parchment-white);
-    font-weight: 300;
-    font-size: 0.85rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
-.hsb-status {
-    margin: 0;
-    font-family: "Geist Mono", sans-serif;
-    color: var(--parchment-white);
+    display: inline;
     font-weight: 600;
-    font-size: 0.85rem;
-    letter-spacing: 0.05em;
+    font-family: "Geist Mono", sans-serif;
     text-transform: uppercase;
+    font-size: 0.9rem;
 }
-
-/* The paragraph immediately after h1. */
-.hero-description {
+.main-heading {
+    margin: 0;
+    font-size: 6rem;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--ink-black);
+}
+.hero-paragraph {
     margin: 0;
     padding: 20px 0 40px 0;
     max-width: 1700px;
@@ -198,14 +187,7 @@ nav ul {
     font-family: "Geist", sans-serif;
     color: var(--ink-black);
 }
-
-.hero {
-    margin: 60px -80px;
-    border-bottom: 2px solid var(--ink-black);
-    padding-left: 80px;
-    padding-right: 80px;
-}
-
+/* 4b. The stylistic boxes on the hero  */
 .title-bar {
     margin: 0;
     max-width: 400px;
@@ -217,16 +199,13 @@ nav ul {
     position: relative;
     text-transform: uppercase;
 }
-
-
-.title {
+.title-bar > p {
     margin: 8px 0 8px 20px;
     font-family: "Geist Mono", sans-serif;
     font-size: 0.8rem;
     font-weight: bold;
     color: var(--parchment-white);
 }
-
 .close-dot {
     position: absolute;
     top: 12px;
@@ -237,7 +216,6 @@ nav ul {
     border-radius: 50%;
     background-color: #ff605c;
 }
-
 .minimize-dot {
     position: absolute;
     top: 12px;
@@ -248,16 +226,13 @@ nav ul {
     border-radius: 50%;
     background-color: #ffbd44;
 }
-
 .box {
     margin: 0;
     max-width: 400px;
     border-left: 2px solid var(--ink-black);
     border-right: 2px solid var(--ink-black);
 }
-
-
-.subtitle {
+.box-subtitle {
     margin: 0 0 0 20px;
     padding-top: 16px;
     font-family: "Geist Mono", sans-serif;
@@ -265,8 +240,7 @@ nav ul {
     font-weight: 800;
 
 }
-
-.desc {
+.box-desc {
     margin: 0 20px 0 20px;
     padding-bottom: 16px;
     font-family: "Geist Mono", sans-serif;
@@ -281,10 +255,11 @@ nav ul {
     border-bottom-right-radius: 10px;
 }
 
-.box--closed .desc {
+.box--closed .box-desc {
     border-bottom: none;
 }
 
+/* 5. Main section */
 main {
     padding: 80px;
     max-width: 1920px;
@@ -297,8 +272,6 @@ main section {
     scroll-margin-top: 80px;
     
 }
-
-/* The label paragraphs */
 .section-label {
     margin: 0 0 16px 0;
     font-size: 0.85rem;
@@ -308,8 +281,6 @@ main section {
     letter-spacing: 0.08em;
     color: var(--burnt-orange);
 }
-
-
 .subheading {
     line-height: 1.1;
     font-size: 3rem;
@@ -317,7 +288,6 @@ main section {
     margin: 10px 0 20px 0;
     color: var(--ink-black);
 }
-
 .section-paragraph {
     max-width: 650px;
     font-family: "Geist", sans-serif;
@@ -325,6 +295,38 @@ main section {
     font-size: 1.1rem;
     margin: 0;
 }
+
+/* 6. About section */
+.about-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.about-text {
+    flex: 1;
+    margin: 0;
+}
+
+.about-box-title {
+    flex: 1;
+    margin: 0;
+    padding: 8px 0 8px 20px;
+    border: 1px solid var(--ink-black);
+    background-color: var(--ink-black);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.about-box-title > p {
+    margin: 0;
+    color: var(--parchment-white);
+    font-family: "Geist Mono", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 
 .dark-band {
     background-color: var(--ink-black);
@@ -384,14 +386,6 @@ footer {
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 0.08em;
-}
-
-body {
-    margin: 0;
-    font-family: Arial;
-    color: #222;
-    line-height: 1.5;
-    background-color: var(--parchment-white);
 }
 
 /* For devices like phones */
