@@ -360,6 +360,44 @@ main section {
     text-transform: uppercase;
 } */
 
+#interests .subheading {
+    text-transform: uppercase; 
+    font-weight: 800;
+}
+
+.interests-box1 {
+    max-width: 50vw;
+    border: 2px solid var(--ink-black);
+    border-radius: 10px;
+    padding: 32px;
+
+}
+
+.image-container {
+    margin: 0;
+    position: relative;
+}
+
+.image-container div {
+    position: absolute;
+    margin: 16px;
+    background-color: var(--ink-black);
+    border-radius: 4px;
+    padding: 8px;
+}
+.image-container div p {
+    margin: 0;
+    color: var(--parchment-white);
+    font-size: 0.85rem;
+    font-family: "Geist Mono", sans-serif;
+    font-weight: 700;
+}
+
+.interests-box1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
 
 .dark-band {
     background-color: var(--ink-black);
