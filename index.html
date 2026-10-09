@@ -10,7 +10,13 @@
     <header id="site-header" class="site-header">
         <span class="header-dot"></span>
         <a href="#" class="header-link">Alex&ensp;/&ensp;/&ensp;Portfolio v.1.0</a>
-        <nav>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="sr-only">Open navigation menu</span>
+        </button>
+        <nav id="primary-navigation">
             <ul>
                 <li><a href="#about">[&emsp;ABOUT&emsp;]</a></li>
                 <li><a href="#interests">[&emsp;INTERESTS&emsp;]</a></li>
@@ -38,7 +44,7 @@
             </div>
             <div class="box">
                 <p class="box-subtitle">[01_CORE_LANGUAGES]</p>
-                <p class="box-desc box-desc--end">C++, Java, Arduino</p>
+                <p class="box-desc">C++, Java, Arduino</p>
             </div>
             <div class="box box--closed">
                 <p class="box-subtitle">[02_SOMETHING]</p>
@@ -70,6 +76,14 @@
                         <img src="images/harrison-broadbent-fZB51omnY_Y-unsplash.jpg">
                     </div>
                     
+                    <div class="tags-container">
+                        <div>Microcontroller</div>
+                        <div>Robotics</div>
+                    </div>
+                    <div>
+                        <h3>something</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi tenetur ad quo perferendis, tempora necessitatibus ut. Odit quasi illum ex soluta consectetur architecto minus, quidem qui a laborum assumenda saepe.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -97,5 +111,39 @@
             <p class="footer-paragraph">alexis de paz / / available for projects</p>
         </section>
     </footer>
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navigation = document.querySelector("#primary-navigation");
+
+        function closeMenu() {
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.querySelector(".sr-only").textContent = "Open navigation menu";
+        }
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!isOpen));
+            menuToggle.querySelector(".sr-only").textContent = isOpen
+                ? "Open navigation menu"
+                : "Close navigation menu";
+        });
+
+        navigation.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!navigation.contains(event.target) && !menuToggle.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeMenu();
+                menuToggle.focus();
+            }
+        });
+    </script>
 </body>
 </html>
