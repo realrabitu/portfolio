@@ -4,26 +4,33 @@
     <meta charset="UTF-8"/>
     <meta name ="viewport" content="width=device-width"/>
     <link href="style.css" rel="stylesheet"/>
+    <script src="script.js" defer></script>
     <title>alex | portfolio</title>
 </head>
 <body>
     <header id="site-header" class="site-header">
         <span class="header-dot"></span>
         <a href="#" class="header-link">Alex&ensp;/&ensp;/&ensp;Portfolio v.1.0</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="sr-only">Open navigation menu</span>
-        </button>
         <nav id="primary-navigation">
             <ul>
                 <li><a href="#about">[&emsp;ABOUT&emsp;]</a></li>
                 <li><a href="#interests">[&emsp;INTERESTS&emsp;]</a></li>
                 <li><a href="#experiences">[&emsp;EXPERIENCES&emsp;]</a></li>
             </ul>
+            
+            <div class="ham-menu">
+                <span></span><span></span><span></span>
+            </div>
+            <a href="#contact" class="cta-button">Run contact.exe</a>
         </nav>
-        <a href="#contact" class="cta-button">Run contact.exe</a>
+        <div class="off-screen-menu">
+            <ul>
+                <li><a href="#about">[&emsp;ABOUT&emsp;]</a></li>
+                <li><a href="#interests">[&emsp;INTERESTS&emsp;]</a></li>
+                <li><a href="#experiences">[&emsp;EXPERIENCES&emsp;]</a></li>
+            </ul>
+        </div>
+        
     </header>
     
     <main>
@@ -36,7 +43,7 @@
             <p style="display: inline; font-weight: 700">&mdash;&mdash;</p>
             <p class="name-label">&emsp;Alexis De Paz</p>
             <h1 class="main-heading">Let's build stuff.</h1>
-            <p class="hero-paragraph">I am Alex. We should build things that empower people to explore, create, and solve problems through technology. <br>An Information Technology student exploring the realm of tech through the lens of curiosity, experimentation and creation.
+            <p class="hero-paragraph">We should build things that empower people to explore, create, and solve problems through technology. <br>An IT student exploring the realm of tech through the lens of innovation and development.
             </p>
             <div class="hero-box">
                 <div class="title-bar">
@@ -58,8 +65,8 @@
         <section id="about" class="about-section">
             <div class="about-text">
                 <p class="section-label">02&ensp;/&ensp;/&ensp;About Me</p>
-                <h2 class="subheading">Your first subheading</h2>
-                <p class="section-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quis voluptatum aliquam tenetur harum nesciunt cum iusto vero officia aspernatur dignissimos, perferendis eligendi ratione vitae unde modi accusantium alias? Facere!</p>
+                <h2 class="subheading">Curious by nature.</h2>
+                <p class="section-paragraph">Hi, I am <span>Alexis De Paz </span>, a first-year IT student. </p>
             </div>
             <div class="about-box">
                 <div class="titlebox">
@@ -85,7 +92,7 @@
                     </div>
                     <div>
                         <h3 class="interests-subheading">Arduino</h3>
-                        <p class="interests-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi tenetur ad quo perferendis, tempora necessitatibus ut. Odit quasi illum ex soluta consectetur architecto minus, quidem qui a laborum assumenda saepe.</p>
+                        <p class="interests-desc">What started as a robotics class turned into a passion for tinkering with circuits, and exploring the world of low-level workings of computers. </p>
                     </div>
                 </div>
                 <div class="interests-box2">
@@ -100,7 +107,7 @@
                     </div>
                     <div>
                         <h3 class="interests-subheading">Retro Computing</h3>
-                        <p class="interests-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius deserunt non explicabo perspiciatis nemo fuga quae ea, mollitia commodi minima voluptate cupiditate illum natus dolorum. Ipsa animi placeat fuga.</p>
+                        <p class="interests-desc">My fascination with computing extends beyond modern tech. I enjoy exploring obsolete technologies, computers and operating systems that helped shape the digital world we know today.</p>
                     </div>
                 </div>
             </div>
@@ -129,39 +136,5 @@
             <p class="footer-paragraph">alexis de paz / / available for projects</p>
         </section>
     </footer>
-    <script>
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navigation = document.querySelector("#primary-navigation");
-
-        function closeMenu() {
-            menuToggle.setAttribute("aria-expanded", "false");
-            menuToggle.querySelector(".sr-only").textContent = "Open navigation menu";
-        }
-
-        menuToggle.addEventListener("click", () => {
-            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-            menuToggle.setAttribute("aria-expanded", String(!isOpen));
-            menuToggle.querySelector(".sr-only").textContent = isOpen
-                ? "Open navigation menu"
-                : "Close navigation menu";
-        });
-
-        navigation.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", closeMenu);
-        });
-
-        document.addEventListener("click", (event) => {
-            if (!navigation.contains(event.target) && !menuToggle.contains(event.target)) {
-                closeMenu();
-            }
-        });
-
-        document.addEventListener("keydown", (event) => {
-            if (event.key === "Escape") {
-                closeMenu();
-                menuToggle.focus();
-            }
-        });
-    </script>
-</body>
+</body> 
 </html>
