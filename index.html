@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="en-US">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta name ="viewport" content="width=device-width"/>
-    <link href="style.css" rel="stylesheet"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="style.css" rel="stylesheet" />
     <script src="script.js" defer></script>
     <title>alex | portfolio</title>
 </head>
+
 <body>
     <header id="site-header" class="site-header">
         <span class="header-dot"></span>
@@ -14,25 +16,26 @@
         <nav id="primary-navigation">
             <ul>
                 <li><a href="#about">[&emsp;ABOUT&emsp;]</a></li>
-                <li><a href="#interests">[&emsp;INTERESTS&emsp;]</a></li>
+                <li><a href="#technologies">[&emsp;TECHNOLOGIES&emsp;]</a></li>
                 <li><a href="#experiences">[&emsp;EXPERIENCES&emsp;]</a></li>
             </ul>
-            
-            <div class="ham-menu">
+
+            <button class="ham-menu" type="button" aria-label="Open navigation menu" aria-controls="mobile-navigation"
+                aria-expanded="false">
                 <span></span><span></span><span></span>
-            </div>
+            </button>
             <a href="#contact" class="cta-button">Run contact.exe</a>
         </nav>
-        <div class="off-screen-menu">
+        <div id="mobile-navigation" class="off-screen-menu">
             <ul>
-                <li><a href="#about">[&emsp;ABOUT&emsp;]</a></li>
-                <li><a href="#interests">[&emsp;INTERESTS&emsp;]</a></li>
-                <li><a href="#experiences">[&emsp;EXPERIENCES&emsp;]</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#technologies">TECHNOLOGIES</a></li>
+                <li><a href="#experiences">EXPERIENCES</a></li>
             </ul>
         </div>
-        
+
     </header>
-    
+
     <main>
         <div class="hero-status-bar">
             <p class="hsb-title">BS Information Technology / / Developers Committee Portfolio</p>
@@ -43,7 +46,9 @@
             <p style="display: inline; font-weight: 700">&mdash;&mdash;</p>
             <p class="name-label">&emsp;Alexis De Paz</p>
             <h1 class="main-heading">Let's build stuff.</h1>
-            <p class="hero-paragraph">We should build things that empower people to explore, create, and solve problems through technology. <br>An IT student exploring the realm of tech through the lens of innovation and development.
+            <p class="hero-paragraph">We should build things that empower people to explore, create, and solve problems
+                through technology. <br>An IT student exploring the realm of tech through the lens of innovation and
+                development.
             </p>
             <div class="hero-box">
                 <div class="title-bar">
@@ -61,7 +66,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="about" class="about-section">
             <div class="about-text">
                 <p class="section-label">02&ensp;/&ensp;/&ensp;About Me</p>
@@ -73,32 +78,92 @@
                     <span class="close-dot"></span>
                     <span class="minimize-dot"></span>
                 </div>
-                <div class="about-box-section"></div>     
-            </div>         
+                <div class="about-box-section"></div>
+            </div>
         </section>
-        <section id="interests">
-            <p class="section-label">03&ensp;/&ensp;/&ensp;Interests</p>
-            <h2 class="subheading">Things I'm curious about</h2>
-            <div class="interests-container">
-                <div class="interests-box1">
+        <section id="technologies">
+            <p class="section-label">03&ensp;/&ensp;/&ensp;Tools and Technologies</p>
+            <h2 class="subheading">A collection of tools and tech</h2>
+            <div class="technologies-container-top">
+                <div class="technologies-card">
                     <div class="image-container">
-                        <div><p class="sys-label">SYS_LOG_01</p></div>
-                        <img src="images/harrison-broadbent-fZB51omnY_Y-unsplash.jpg">
+                        <div>
+                            <p class="sys-label">SYS_LOG_01</p>
+                        </div>
+                        <img src="images/harrison-broadbent-fZB51omnY_Y-unsplash.jpg" alt="Arduino microcontroller board">
                     </div>
-                    
                     <div class="tags-container">
                         <div>Microcontroller</div>
                         <div>Robotics</div>
                     </div>
                     <div>
-                        <h3 class="interests-subheading">Arduino</h3>
-                        <p class="interests-desc">What started as a robotics class turned into a passion for tinkering with circuits, and exploring the world of low-level workings of computers. </p>
+                        <h3 class="technologies-subheading">Arduino</h3>
+                        <p class="technologies-desc">What started as a robotics class turned into a passion for
+                            tinkering with circuits, and exploring the world of low-level workings of computers. </p>
                     </div>
                 </div>
-                <div class="interests-box2">
+                <div class="technologies-card">
                     <div class="image-container">
-                        <div><p class="sys-label">SYS_LOG_02</p></div>
-                        <img src="images/retrocomputing-1100-619-30-1.jpg">
+                        <div>
+                            <p class="sys-label">SYS_LOG_02</p>
+                        </div>
+                        <img class="cpp-logo" src="images/012225.BLOG_.21st-Century-C-G.webp" alt="C++ logo">
+                    </div>
+                    <div class="tags-container">
+                        <div>Programming</div>
+                        <div>Performance</div>
+                        <div>Systems</div>
+                    </div>
+                    <div>
+                        <h3 class="technologies-subheading">C++</h3>
+                        <p class="technologies-desc">I enjoy using C++ to understand how software works closer to the
+                            hardware, while building efficient and reliable programs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="technologies-container-middle">
+                <div class="technologies-card technologies-card--java">
+                    <div class="image-container">
+                        <div>
+                            <p class="sys-label">SYS_LOG_03</p>
+                        </div>
+                        <img class="java-logo" src="images/Java-Logo.png" alt="Java logo">
+                    </div>
+                    <div class="tags-container">
+                        <div>Programming</div>
+                        <div>Object-Oriented</div>
+                        <div>Platform Independent</div>
+                    </div>
+                    <div>
+                        <h3 class="technologies-subheading">Java</h3>
+                        <p class="technologies-desc">Java is a versatile language that interests me for its object-oriented approach and ability to run across different platforms.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="technologies-container-bottom">
+                <div class="technologies-card">
+                    <div class="image-container">
+                        <div>
+                            <p class="sys-label">SYS_LOG_04</p>
+                        </div>
+                        <img class="godot-logo" src="images/godot_logo_light.svg" alt="Godot logo">
+                    </div>
+                    <div class="tags-container">
+                        <div>Game Development</div>
+                        <div>Open Source</div>
+                        <div>GDScript</div>
+                    </div>
+                    <div>
+                        <h3 class="technologies-subheading">Godot</h3>
+                        <p class="technologies-desc">I have used Godot to make games that are interactive, fun, and provide a learning experience for users.</p>
+                    </div>
+                </div>
+                <div class="technologies-card">
+                    <div class="image-container">
+                        <div>
+                            <p class="sys-label">SYS_LOG_05</p>
+                        </div>
+                        <img src="images/retrocomputing-1100-619-30-1.jpg" alt="Vintage computer hardware">
                     </div>
                     <div class="tags-container">
                         <div>Hardware</div>
@@ -106,8 +171,29 @@
                         <div>History</div>
                     </div>
                     <div>
-                        <h3 class="interests-subheading">Retro Computing</h3>
-                        <p class="interests-desc">My fascination with computing extends beyond modern tech. I enjoy exploring obsolete technologies, computers and operating systems that helped shape the digital world we know today.</p>
+                        <h3 class="technologies-subheading">Retro Computing</h3>
+                        <p class="technologies-desc">My fascination with computing extends beyond modern tech. I enjoy
+                            exploring obsolete technologies, computers and operating systems that helped shape the
+                            digital world we know today.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="technologies-container-last">
+                <div class="technologies-card technologies-card--web">
+                    <div class="image-container">
+                        <div>
+                            <p class="sys-label">SYS_LOG_06</p>
+                        </div>
+                        <img class="web-logo" src="images/CSS3 HTML5.svg" alt="HTML5 and CSS3 logos">
+                    </div>
+                    <div class="tags-container">
+                        <div>HTML</div>
+                        <div>CSS</div>
+                        <div>Websites</div>
+                    </div>
+                    <div>
+                        <h3 class="technologies-subheading">Web Development</h3>
+                        <p class="technologies-desc">I enjoy building responsive, accessible websites that turn ideas into useful experiences for people.</p>
                     </div>
                 </div>
             </div>
@@ -116,16 +202,20 @@
     <div class="dark-band">
         <section id="experiences">
             <p class="bottom-section-label">04&ensp;/&ensp;/&ensp;Experiences</p>
-            <h2 class="bottom-subheading">Your third subheading</h2>
-            <p class="bottom-section-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae numquam possimus deserunt ipsam maiores maxime accusamus, quisquam illo nesciunt consequuntur quis et, nam esse exercitationem voluptatum nisi quae amet cupiditate.</p>
+            <h2 class="bottom-subheading">Still learning.<br> Always building.</h2>
+            <p class="bottom-section-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae numquam
+                possimus deserunt ipsam maiores maxime accusamus, quisquam illo nesciunt consequuntur quis et, nam esse
+                exercitationem voluptatum nisi quae amet cupiditate.</p>
         </section>
     </div>
     <footer>
         <section id="contact" class="footer-border">
             <div class="contact-bg">
-                <p class="bottom-section-label contact-label">/&ensp;/&ensp;Contact</p>
-                <h2 class="bottom-subheading contact-heading">Execute <br>CONTACT_</h2>
-                <a href="mailto:depazalexis455@gmail.com" class="mail-button">PING ME A MESSAGE
+                <p class="bottom-section-label contact-label">05&ensp;/&ensp;/&ensp;Contact</p>
+                <h2 class="bottom-subheading contact-heading">Get in <br>touch</h2>
+                <p class="contact-paragraph">I am not currently open to project work outside of the student council. You are still welcome to reach
+                    out for a friendly hello or future opportunities.</p>
+                <a href="mailto:depazalexis455@gmail.com" class="mail-button">SEND A MESSAGE
                     <span class="mail-arrow" aria-hidden="true">
                         <span></span>
                         <span></span>
@@ -133,8 +223,9 @@
                     </span>
                 </a>
             </div>
-            <p class="footer-paragraph">alexis de paz / / available for projects</p>
+            <p class="footer-paragraph">2026 | Alexis De Paz</p>
         </section>
     </footer>
-</body> 
+</body>
+
 </html>
