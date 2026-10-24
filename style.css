@@ -472,7 +472,10 @@ main section {
 }
 
 .about-box {
-    flex: 1.5;
+    flex: 0 1 440px;
+    width: 100%;
+    max-width: 440px;
+    overflow: hidden;
     box-shadow: 1px 1px 6px var(--ink-black);
     border-radius: 10px;
 }
@@ -492,6 +495,16 @@ main section {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 
+}
+
+.about-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 /*.about-box-title > p {
@@ -525,8 +538,9 @@ main section {
     margin: 24px 0;
 }
 .technologies-container-last {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
     margin-top: 24px;
 }
 .technologies-card {
@@ -538,8 +552,17 @@ main section {
 .technologies-card--java {
     width: 60%;
 }
+
+.technologies-card--godot {
+    padding: 24px;
+}
+
 .technologies-card--web {
-    width: 60%;
+    width: auto;
+}
+
+.technologies-card--linux {
+    width: auto;
 }
 
 .tags-container {
@@ -584,6 +607,16 @@ main section {
     height: auto;
     display: block;
     border-radius: 6px;
+    box-shadow: 1px 1px 8px var(--ink-black);
+}
+
+.linux-logo {
+    width: 100%;
+    min-height: 220px;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 6px;
+    background-color: var(--sage-mist);
     box-shadow: 1px 1px 8px var(--ink-black);
 }
 
@@ -667,6 +700,41 @@ main section {
     max-width: 650px;
     color: var(--parchment-white);
     font-size: 1.1rem;
+    font-family: "Geist", sans-serif;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.project-card {
+    min-height: 220px;
+    padding: 24px;
+    border: 2px solid var(--sage-mist);
+    border-radius: 10px;
+    background-color: var(--parchment-white);
+    color: var(--ink-black);
+}
+
+.project-card-label {
+    margin: 0 0 24px;
+    color: var(--burnt-orange);
+    font-family: "Geist Mono", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.project-card h3 {
+    margin: 0 0 12px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 1.15rem;
+}
+
+.project-card p:last-child {
+    margin: 0;
     font-family: "Geist", sans-serif;
 }
 
@@ -757,6 +825,40 @@ footer {
 }
 
 .mail-button:focus-visible {
+    outline: 3px solid var(--burnt-orange);
+    outline-offset: 4px;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.social-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.75;
+}
+
+.social-button:focus-visible {
     outline: 3px solid var(--burnt-orange);
     outline-offset: 4px;
 }
@@ -979,11 +1081,14 @@ footer {
     }
 
     .about-box {
+        flex: 0 1 auto;
         width: 100%;
+        max-width: 100%;
+        min-width: 0;
     }
 
     .about-box-section {
-        min-height: 280px;
+        min-height: 0;
     }
 
     .subheading,
@@ -1006,6 +1111,11 @@ footer {
         padding: 24px 0 48px;
     }
 
+    .projects-grid {
+        grid-template-columns: 1fr;
+        margin-top: 32px;
+    }
+
     .technologies-container-top,
     .technologies-container-bottom {
         grid-template-columns: 1fr;
@@ -1024,7 +1134,12 @@ footer {
         width: 100%;
     }
 
+    .technologies-card--linux {
+        width: 100%;
+    }
+
     .technologies-container-last {
+        grid-template-columns: 1fr;
         margin-top: 24px;
     }
 
@@ -1111,9 +1226,25 @@ footer {
         padding: 9px 14px;
         font-size: 0.7rem;
     }
+
+    .about-section {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .about-text {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .about-box {
+        flex: 0 1 auto;
+        width: min(100%, 440px);
+        max-width: 440px;
+    }
 }
 
-@media (min-width: 701px) and (max-width: 900px) {
+@media (min-width: 701px) and (max-width: 1100px) {
     .site-header,
     main {
         padding-left: 32px;

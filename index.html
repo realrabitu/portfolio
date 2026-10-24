@@ -11,13 +11,13 @@
 
 <body>
     <header id="site-header" class="site-header">
-        <span class="header-dot"></span>
-        <a href="#" class="header-link">Alex&ensp;/&ensp;/&ensp;Portfolio v.1.0</a>
+        <span class="header-dot" aria-hidden="true"></span>
+        <a href="#site-header" class="header-link">Alex&ensp;/&ensp;/&ensp;Portfolio v.1.0</a>
         <nav id="primary-navigation">
             <ul>
                 <li><a href="#about">[&emsp;ABOUT&emsp;]</a></li>
                 <li><a href="#technologies">[&emsp;TECHNOLOGIES&emsp;]</a></li>
-                <li><a href="#experiences">[&emsp;EXPERIENCES&emsp;]</a></li>
+                <li><a href="#experiences">[&emsp;PROJECTS&emsp;]</a></li>
             </ul>
 
             <button class="ham-menu" type="button" aria-label="Open navigation menu" aria-controls="mobile-navigation"
@@ -30,7 +30,7 @@
             <ul>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#technologies">TECHNOLOGIES</a></li>
-                <li><a href="#experiences">EXPERIENCES</a></li>
+                <li><a href="#experiences">PROJECTS / EXPERIENCES</a></li>
             </ul>
         </div>
 
@@ -39,7 +39,7 @@
     <main>
         <div class="hero-status-bar">
             <p class="hsb-title">BS Information Technology / / Developers Committee Portfolio</p>
-            <p class="hsb-status">Status: your_status_here</p>
+            <p class="hsb-status">Status: Stable and compiling</p>
         </div>
         <section class="hero">
             <p class="section-label" style="display: inline;">01&ensp;/&ensp;/&ensp;INDEX </p>
@@ -53,16 +53,16 @@
             <div class="hero-box">
                 <div class="title-bar">
                     <p>ABOUT THE USER</p>
-                    <span class="close-dot"></span>
-                    <span class="minimize-dot"></span>
+                    <span class="close-dot" aria-hidden="true"></span>
+                    <span class="minimize-dot" aria-hidden="true"></span>
                 </div>
                 <div class="box">
                     <p class="box-subtitle">[01_CORE_LANGUAGES]</p>
                     <p class="box-desc">C++, Java, Arduino</p>
                 </div>
                 <div class="box box--closed">
-                    <p class="box-subtitle">[02_SOMETHING]</p>
-                    <p class="box-desc">Something...</p>
+                    <p class="box-subtitle">[02_CURRENT_FOCUS]</p>
+                    <p class="box-desc">Java programming, systems, and robotics</p>
                 </div>
             </div>
         </section>
@@ -71,14 +71,16 @@
             <div class="about-text">
                 <p class="section-label">02&ensp;/&ensp;/&ensp;About Me</p>
                 <h2 class="subheading">Curious by nature.</h2>
-                <p class="section-paragraph">Hi, I am <span>Alexis De Paz </span>, a first-year IT student. </p>
+                <p class="section-paragraph">Hi, I am <span>Alexis De Paz</span>, a first-year IT student who enjoys learning how technology works from the ground up and building systems and projects that turn ideas into useful, creative, and practical experiences.</p>
             </div>
             <div class="about-box">
                 <div class="titlebox">
-                    <span class="close-dot"></span>
-                    <span class="minimize-dot"></span>
+                    <span class="close-dot" aria-hidden="true"></span>
+                    <span class="minimize-dot" aria-hidden="true"></span>
                 </div>
-                <div class="about-box-section"></div>
+                <div class="about-box-section">
+                    <img class="about-image" src="images/pic.jpg" alt="Alexis De Paz">
+                </div>
             </div>
         </section>
         <section id="technologies">
@@ -117,7 +119,7 @@
                     <div>
                         <h3 class="technologies-subheading">C++</h3>
                         <p class="technologies-desc">I enjoy using C++ to understand how software works closer to the
-                            hardware, while building efficient and reliable programs.</p>
+                            hardware, while building efficient and reliable programs. The very first language that I learned myself.</p>
                     </div>
                 </div>
             </div>
@@ -136,12 +138,12 @@
                     </div>
                     <div>
                         <h3 class="technologies-subheading">Java</h3>
-                        <p class="technologies-desc">Java is a versatile language that interests me for its object-oriented approach and ability to run across different platforms.</p>
+                        <p class="technologies-desc">Java is a versatile language that interests me for its object-oriented programming, not just as a course requirement, but as a tool that helps me understand programming and building useful projects with it.</p>
                     </div>
                 </div>
             </div>
             <div class="technologies-container-bottom">
-                <div class="technologies-card">
+                <div class="technologies-card technologies-card--godot">
                     <div class="image-container">
                         <div>
                             <p class="sys-label">SYS_LOG_04</p>
@@ -155,7 +157,7 @@
                     </div>
                     <div>
                         <h3 class="technologies-subheading">Godot</h3>
-                        <p class="technologies-desc">I have used Godot to make games that are interactive, fun, and provide a learning experience for users.</p>
+                        <p class="technologies-desc">I have used the Godot Game Engine to make games that are interactive, fun, and provide a learning experience for users.</p>
                     </div>
                 </div>
                 <div class="technologies-card">
@@ -193,7 +195,25 @@
                     </div>
                     <div>
                         <h3 class="technologies-subheading">Web Development</h3>
-                        <p class="technologies-desc">I enjoy building responsive, accessible websites that turn ideas into useful experiences for people.</p>
+                        <p class="technologies-desc">I am building responsive, accessible websites that turn ideas into useful experiences for people.</p>
+                    </div>
+                </div>
+                <div class="technologies-card technologies-card--linux">
+                    <div class="image-container">
+                        <div>
+                            <p class="sys-label">SYS_LOG_07</p>
+                        </div>
+                        <img class="linux-logo" src="images/gnulinux-logo.webp" alt="Tux, the Linux mascot">
+                    </div>
+                    <div class="tags-container">
+                        <div>Open Source</div>
+                        <div>Operating Systems</div>
+                        <div>SysAdmin</div>
+                    </div>
+                    <div>
+                        <h3 class="technologies-subheading">Linux</h3>
+                        <p class="technologies-desc">I enjoy learning Linux to better understand operating systems, command-line tools, and a deeper understanding of system administration.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -201,11 +221,25 @@
     </main>
     <div class="dark-band">
         <section id="experiences">
-            <p class="bottom-section-label">04&ensp;/&ensp;/&ensp;Experiences</p>
+            <p class="bottom-section-label">04&ensp;/&ensp;/&ensp;Projects and Experiences</p>
             <h2 class="bottom-subheading">Still learning.<br> Always building.</h2>
-            <p class="bottom-section-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae numquam
-                possimus deserunt ipsam maiores maxime accusamus, quisquam illo nesciunt consequuntur quis et, nam esse
-                exercitationem voluptatum nisi quae amet cupiditate.</p>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <p class="project-card-label">PROJECT_01</p>
+                    <h3>Project placeholder</h3>
+                    <p>Add a project description, technologies, and links here.</p>
+                </article>
+                <article class="project-card">
+                    <p class="project-card-label">PROJECT_02</p>
+                    <h3>Project placeholder</h3>
+                    <p>Add another project or school project here.</p>
+                </article>
+                <article class="project-card">
+                    <p class="project-card-label">EXPERIENCE_01</p>
+                    <h3>Experience placeholder</h3>
+                    <p>Add a role, organization, or meaningful experience here.</p>
+                </article>
+            </div>
         </section>
     </div>
     <footer>
@@ -215,13 +249,21 @@
                 <h2 class="bottom-subheading contact-heading">Get in <br>touch</h2>
                 <p class="contact-paragraph">I am not currently open to project work outside of the student council. You are still welcome to reach
                     out for a friendly hello or future opportunities.</p>
-                <a href="mailto:depazalexis455@gmail.com" class="mail-button">SEND A MESSAGE
+                <a href="mailto:depazalexis455@gmail.com" class="mail-button">SEND AN E-MAIL
                     <span class="mail-arrow" aria-hidden="true">
                         <span></span>
                         <span></span>
                         <span></span>
                     </span>
                 </a>
+                <div class="contact-buttons">
+                    <a href="https://github.com/realrabitu" class="social-button" aria-label="GitHub">
+                        <img src="images/images.png" alt="" aria-hidden="true">
+                    </a>
+                    <a href="https://www.facebook.com/rab171/" class="social-button" aria-label="Facebook">
+                        <img src="images/free-facebook-icon-2869-thumb.png" alt="" aria-hidden="true">
+                    </a>
+                </div>
             </div>
             <p class="footer-paragraph">2026 | Alexis De Paz</p>
         </section>
